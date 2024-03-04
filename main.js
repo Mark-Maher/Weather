@@ -20,32 +20,7 @@ let degree3 = document.querySelector(".degree3");
 let forecastIcon3 = document.querySelector(".forecastIcon3 img");
 let submit = document.getElementById("submit");
 let city;
-// if (navigator.geolocation) {
-//   navigator.geolocation.getCurrentPosition(function (position) {
-//     var latitude = position.coords.latitude;
-//     var longitude = position.coords.longitude;
-//     var geoApi = fetch(
-//       `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-//     )
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log(data);
-//         Swal.fire({
-//           title: `your City is ${data.city} and your country is ${data.countryName}`,
-//           text: "clicked submit to get your city 😁",
-//           icon: "success",
-//         });
-//         findInput.value = data.city;
-//         getMyInfo();
-//       });
-//   });
-// } else {
-//   Swal.fire({
-//     title: `your City is ${data.city} and your country is ${data.countryName}`,
-//     text: "clicked submit to get your city 😁",
-//     icon: "success",
-//   });
-// }
+
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     function (position) {
@@ -59,7 +34,7 @@ if (navigator.geolocation) {
           console.log(data);
           Swal.fire({
             title: `Your city is ${data.city} and your country is ${data.countryName}`,
-            text: "Click submit to get your city 😁",
+            text: "We get your city information 😁",
             icon: "success",
           });
           findInput.value = data.city;
